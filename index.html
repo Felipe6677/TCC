@@ -7,7 +7,26 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="site-container">
+  <div id="loginModal" class="login-modal">
+    <div class="login-container">
+      <div class="login-box">
+        <h1>Time Game</h1>
+        <form id="loginForm">
+          <input type="text" id="username" placeholder="Usuário" required>
+          <input type="password" id="password" placeholder="Senha" required>
+          <button type="submit">Entrar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div id="mainContent" class="site-container" style="display: none;">
+    <header class="header-with-logout">
+      <div class="user-info">
+        <span id="userDisplay">Bem-vindo</span>
+        <button id="logoutBtn" class="logout-btn">Sair</button>
+      </div>
+    </header>
     <header class="hero">
       <div class="hero-content">
         <span class="eyebrow">Time Game</span>
@@ -28,10 +47,24 @@
     <main>
       <section class="panel">
         <h2>Jogos Platinados</h2>
+                <div class="search-box">
+                  <input type="text" id="gameSearch" placeholder="Procurar jogo...">
+                  <div id="searchResults" class="search-results"></div>
+                </div>
         <div class="card-grid">
           <div class="card">The Last of Us Part II</div>
           <div class="card">Ghost of Tsushima</div>
           <div class="card">Elden Ring</div>
+                  <div class="card">Dark Souls III</div>
+                  <div class="card">God of War</div>
+                  <div class="card">Bloodborne</div>
+                  <div class="card hidden" id="moreGames1">Uncharted 4</div>
+                  <div class="card hidden" id="moreGames2">Horizon Zero Dawn</div>
+                  <div class="card hidden" id="moreGames3">Spider-Man</div>
+                  <div class="card hidden" id="moreGames4">Demon's Souls</div>
+                  <div class="card hidden" id="moreGames5">Final Fantasy VII Remake</div>
+                  <div class="card hidden" id="moreGames6">Kena Bridge of Spirits</div>
+          <button id="seeMoreBtn" class="see-more-btn">Ver Mais</button>
         </div>
       </section>
 
