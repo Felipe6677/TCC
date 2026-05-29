@@ -13,6 +13,16 @@
 #userDisplay{color:#93c5fd;font-weight:600}
 .logout-btn{padding:.6rem 1.2rem;background:rgba(239,68,68,.2);color:#fca5a5;border:1px solid rgba(239,68,68,.3);border-radius:8px}
 .logout-btn:hover{background:rgba(239,68,68,.3);border-color:rgba(239,68,68,.5)}
+.tab-nav{display:flex;gap:1rem;flex-wrap:wrap;margin:2rem 0;padding:0 1rem}
+.tab-btn{flex:1 1 150px;background:rgba(15,23,47,.9);color:#cbd5e1;border:1px solid rgba(100,116,139,.16);border-radius:999px;padding:.9rem 1.2rem;transition:.2s ease}
+.tab-btn.active{background:linear-gradient(90deg,#2563eb,#1d4ed8);color:#fff;border-color:transparent}
+.tab-content{display:none}
+.tab-content.active{display:block}
+.timer-panel{display:grid;gap:2rem}
+.timer-card{background:rgba(15,23,47,.92);border:1px solid rgba(96,165,250,.14);border-radius:28px;padding:1.7rem;box-shadow:var(--shadow);max-width:100%}
+.select-label{display:block;margin:1rem 0 .5rem;font-size:.95rem;color:#93c5fd;text-transform:uppercase;letter-spacing:.12em}
+#gameSelect{width:100%;padding:1rem;border:1px solid rgba(29,78,216,.3);border-radius:14px;background:rgba(255,255,255,.05);color:var(--text);font-size:1rem}
+.selected-game{margin:1rem 0;font-size:1rem;color:#cbd5e1}
 .search-box{margin-bottom:1.5rem;display:flex;flex-direction:column;gap:.8rem}
 #gameSearch{padding:.8rem;border:1px solid rgba(29,78,216,.3);border-radius:12px;background:rgba(255,255,255,.03);color:var(--text);font-size:1rem}
 #gameSearch::placeholder{color:#64748b}

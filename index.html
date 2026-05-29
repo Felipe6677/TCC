@@ -27,81 +27,95 @@
         <button id="logoutBtn" class="logout-btn">Sair</button>
       </div>
     </header>
-    <header class="hero">
-      <div class="hero-content">
-        <span class="eyebrow">Time Game</span>
-        <h1>Seu universo gamer de conquistas</h1>
-        <p>Monitore o tempo jogado no PC, console e mobile. Registre jogos platinados, troféus e histórico de partidas.</p>
+    <nav class="tab-nav">
+      <button class="tab-btn active" data-tab="timerTab">Cronômetro</button>
+      <button class="tab-btn" data-tab="gamesTab">Jogos</button>
+    </nav>
+    <div class="tab-content active" id="timerTab">
+      <section class="panel timer-panel">
+        <div class="hero-content">
+          <span class="eyebrow">Time Game</span>
+          <h1>Gerencie seu tempo e escolha o jogo certo</h1>
+          <p>Use o cronômetro para registrar sessões de jogos com o título selecionado. Ideal para controlar tempo de jogo no PC, console ou mobile.</p>
+        </div>
         <div class="timer-card">
           <div class="timer-label">Cronômetro de jogo</div>
           <div id="timer" class="timer-value">00:00:00</div>
+          <label class="select-label" for="gameSelect">Selecione o jogo</label>
+          <select id="gameSelect"></select>
+          <div class="selected-game">Jogo selecionado: <span id="selectedGameLabel">Nenhum</span></div>
           <div class="timer-controls">
             <button id="startBtn">Iniciar</button>
             <button id="stopBtn">Parar</button>
             <button id="resetBtn">Zerar</button>
           </div>
         </div>
-      </div>
-    </header>
-
-    <main>
-      <section class="panel">
-        <h2>Jogos Platinados</h2>
-                <div class="search-box">
-                  <input type="text" id="gameSearch" placeholder="Procurar jogo...">
-                  <div id="searchResults" class="search-results"></div>
-                </div>
-        <div class="card-grid">
-          <div class="card">The Last of Us Part II</div>
-          <div class="card">Ghost of Tsushima</div>
-          <div class="card">Elden Ring</div>
-                  <div class="card">Dark Souls III</div>
-                  <div class="card">God of War</div>
-                  <div class="card">Bloodborne</div>
-                  <div class="card hidden" id="moreGames1">Uncharted 4</div>
-                  <div class="card hidden" id="moreGames2">Horizon Zero Dawn</div>
-                  <div class="card hidden" id="moreGames3">Spider-Man</div>
-                  <div class="card hidden" id="moreGames4">Demon's Souls</div>
-                  <div class="card hidden" id="moreGames5">Final Fantasy VII Remake</div>
-                  <div class="card hidden" id="moreGames6">Kena Bridge of Spirits</div>
+      </section>
+    </div>
+    <div class="tab-content" id="gamesTab">
+      <main>
+        <section class="panel">
+          <h2>Jogos Platinados</h2>
+          <div class="search-box">
+            <input type="text" id="gameSearch" placeholder="Procurar jogo...">
+            <div id="searchResults" class="search-results"></div>
+          </div>
+          <div class="card-grid" id="gameGrid">
+            <div class="card">The Last of Us Part II</div>
+            <div class="card">Ghost of Tsushima</div>
+            <div class="card">Elden Ring</div>
+            <div class="card">Dark Souls III</div>
+            <div class="card">God of War</div>
+            <div class="card">Bloodborne</div>
+            <div class="card">GTA V</div>
+            <div class="card">Red Dead Redemption 2</div>
+            <div class="card hidden" id="moreGames1">GTA San Andreas</div>
+            <div class="card hidden" id="moreGames2">GTA IV</div>
+            <div class="card hidden" id="moreGames3">GTA: Vice City</div>
+            <div class="card hidden" id="moreGames4">Red Dead Redemption</div>
+            <div class="card hidden" id="moreGames5">Bully</div>
+            <div class="card hidden" id="moreGames6">Max Payne 3</div>
+            <div class="card hidden" id="moreGames7">Horizon Zero Dawn</div>
+            <div class="card hidden" id="moreGames8">Spider-Man</div>
+            <div class="card hidden" id="moreGames9">Demon's Souls</div>
+            <div class="card hidden" id="moreGames10">Final Fantasy VII Remake</div>
+            <div class="card hidden" id="moreGames11">Kena Bridge of Spirits</div>
+            <div class="card hidden" id="moreGames12">God of War Ragnarök</div>
+          </div>
           <button id="seeMoreBtn" class="see-more-btn">Ver Mais</button>
-        </div>
-      </section>
-
-      <section class="panel blue-panel">
-        <h2>Trofeus Ganhos</h2>
-        <div class="stats-grid">
-          <div class="stat-card">
-            <span>Ouro</span>
-            <strong>12</strong>
+        </section>
+        <section class="panel blue-panel">
+          <h2>Trofeus Ganhos</h2>
+          <div class="stats-grid">
+            <div class="stat-card">
+              <span>Ouro</span>
+              <strong>12</strong>
+            </div>
+            <div class="stat-card">
+              <span>Prata</span>
+              <strong>34</strong>
+            </div>
+            <div class="stat-card">
+              <span>Bronze</span>
+              <strong>58</strong>
+            </div>
           </div>
-          <div class="stat-card">
-            <span>Prata</span>
-            <strong>34</strong>
+        </section>
+        <section class="panel">
+          <h2>Jogos Acessados</h2>
+          <div class="list-card" id="accessedList">
+            <div class="list-item">Cyberpunk 2077 - Console</div>
+            <div class="list-item">Apex Legends - PC</div>
+            <div class="list-item">Genshin Impact - Mobile</div>
+            <div class="list-item">FIFA 24 - Console</div>
           </div>
-          <div class="stat-card">
-            <span>Bronze</span>
-            <strong>58</strong>
-          </div>
-        </div>
-      </section>
-
-      <section class="panel">
-        <h2>Jogos Acessados</h2>
-        <div class="list-card">
-          <div class="list-item">Cyberpunk 2077 - Console</div>
-          <div class="list-item">Apex Legends - PC</div>
-          <div class="list-item">Genshin Impact - Mobile</div>
-          <div class="list-item">FIFA 24 - Console</div>
-        </div>
-      </section>
-
-      <section class="panel dark-panel">
-        <h2>Conceito e tecnologia</h2>
-        <p>O Time Game reúne o tempo jogado e as conquistas do jogador em uma experiência visual moderna. Ideal para acompanhar performance, progressos e oferecer um diário gamer com estilo tecnológico.</p>
-      </section>
-    </main>
-
+        </section>
+        <section class="panel dark-panel">
+          <h2>Conceito e tecnologia</h2>
+          <p>O Time Game reúne o tempo jogado e as conquistas do jogador em uma experiência visual moderna. Ideal para acompanhar performance, progressos e registrar suas sessões com estilo.</p>
+        </section>
+      </main>
+    </div>
     <footer>
       <span>Time Game © 2026</span>
       <span>PC · Console · Mobile</span>
